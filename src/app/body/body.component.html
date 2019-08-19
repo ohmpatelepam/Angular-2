@@ -2,7 +2,7 @@
 
 <body>
     <div  *ngFor="let news of data | keyvalue">
-    <app-newscell *ngFor="let item of news.value | keyvalue" [image] = "item.value.imageurlText" [source] = "item.value.sourceText"  [date] = "item.value.dateText" [description] = "item.value.sourceText">
+    <app-newscell *ngFor="let item of news.value | keyvalue" [image] = "item.value.imageurlText" [source] = "item.value.sourceText"  [date] = "item.value.dateText" [description] = "item.value.contentText" [author] = "item.value.authorText">
         
     </app-newscell></div> 
 </body>

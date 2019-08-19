@@ -10,7 +10,7 @@ import { NewscellComponent } from './newscell/newscell.component';
 import { LoaderComponent } from './loader/loader.component';
 import {ModelService} from './model.service';
 import { AddarticleComponent } from './addarticle/addarticle.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
@@ -28,7 +28,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ModelService
     ],
