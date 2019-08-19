@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router} from '@angular/router';
 import { obj,ModelService } from '../model.service';
-import {NgForm} from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-addarticle',
   templateUrl: './addarticle.component.html',
@@ -9,14 +9,20 @@ import {NgForm} from '@angular/forms';
 })
 export class AddarticleComponent implements OnInit {
 
-  @Input() heading:String;
-  @Input() description:String;
-  @Input() content:String;
-  @Input() Date:Date;
-  @Input() Author:String;
-  @Input() 
-
-  constructor(private route:Router,private model:ModelService) { }
+  form:FormGroup;
+  constructor(private route:Router,private model:ModelService,private fb:FormBuilder) { 
+    this.createForm();
+  }
+  createForm(){
+    this.form = this.fb.group({
+          heading: [''],
+          description: [''],
+          content:[''],
+          date:[''],
+          author:[''],
+          sourceURL:['']
+        });
+  }
 
   ngOnInit() {
   }
