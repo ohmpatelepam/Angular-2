@@ -1,0 +1,43 @@
+aside {
+	float: right;
+	width: 20%;
+	height: 100%;
+	margin-right: 25px;
+}
+#dropdown {
+	width: 98%;
+	height: 34px;
+	border: 2px solid black;
+	border-width: 1px;
+	margin-bottom: 18px
+}
+#side-panel-subscribe-text {
+	font-size: 15px;
+	margin-bottom: -1px;
+}
+#input {
+	width: 68%;
+	height: 34px;
+	border: 1px solid black;
+	margin: 0px;
+}
+#subscribe-button {
+	width: 67px;
+	height: 38px;
+	background-color: black;
+	color: white;
+	border: solid black;
+	position: relative;
+	margin-left: -5px;
+	padding: 0px;
+}
+#add-news{
+	width: auto;
+	height: 28px;
+	background-color: black;
+	color: white;
+	border: solid black;
+	position: relative;
+	margin-left: 0px;
+	padding: 1px;
+}

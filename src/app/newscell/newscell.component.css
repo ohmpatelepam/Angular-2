@@ -1,0 +1,30 @@
+.title {
+	color: #082759;
+}
+.subscript {
+	margin-top: -21px;
+}
+.posted {
+	opacity: 0.5;
+}
+.button {
+	border: 1px;
+	width: 130px;
+	height: 35px;
+	border-color: #ab3c20;
+	background-color: #ab3c20;
+	font-size: 12px;
+	color: white;
+    margin-top: 18px;
+    top: 2px;
+    left: 1px;
+    position: relative;
+}
+img {
+	width: 200px;
+	height: 200px;
+	float: left;
+	background-color: lightgray;
+	margin-right: 30px;
+	margin-top: 3px;
+}

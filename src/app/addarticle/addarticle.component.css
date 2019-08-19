@@ -1,0 +1,26 @@
+.lowerbuttons{
+    background-color: aqua;
+    margin-right: 500px;
+    width: auto;
+    height: auto;
+}
+#short-description-input{
+    height: 50px;;
+}
+#content-input{
+    height: 70px;
+    resize: horizontal;
+}
+#flex_div{
+    display: flex;
+}
+#left_div{
+    margin-right: 350px;
+}
+#right_deiv{
+    margin-left: 350px; 
+}
+#button_div{
+    display: flex;
+    margin-top: 50px; 
+}
