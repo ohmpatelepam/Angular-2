@@ -28,6 +28,7 @@ export class ModelService {
   }
 
   fetchData = async ()=>{
+    
     await fetch('https://newsapi.org/v2/top-headlines?' +
     'country=us&' +
     'apiKey=d4e03df5989c4e4a998e4fb2fe632d48').then(response => response.json()).then(jsonres => this.set(jsonres)).catch(() => {
@@ -64,7 +65,8 @@ export class ModelService {
   }
   getFilterData = (obj) => {
    
-    
+      console.log("filter data");
+      console.log(obj.src);
       if(obj.src === "all"){
         
         return  this.data;

@@ -40,7 +40,7 @@ export class AddarticleComponent implements OnInit {
    saveClicked(){
     
     alert("News Successfully Added");
-    this.route.navigateByUrl('');
+    this.route.navigateByUrl('/home/bodycomponent/all');
   }
   validate(heading,description,content,author,date){
    if(heading == "" || description == "" || content == "" || author == "" || date == ""){
@@ -50,6 +50,6 @@ export class AddarticleComponent implements OnInit {
    return true;
   }
   cancel(){
-    this.route.navigateByUrl('');
+    this.route.navigateByUrl('/home/bodycomponent/all');
   }
 }

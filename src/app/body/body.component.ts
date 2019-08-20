@@ -21,6 +21,7 @@ export class BodyComponent implements OnInit {
   ngOnInit() {
     let scope = this;
     this.route.params.subscribe( params => { 
+      console.log(params);
       scope.data = this.model.getFilterData(params);
       console.log(scope.data);
     });

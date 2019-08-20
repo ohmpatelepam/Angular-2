@@ -20,7 +20,7 @@ export class AsideComponent implements OnInit {
   }
   changedNews(news){
     console.log(news);
-    this.route.navigateByUrl("bodycomponent/" + news);
+    this.route.navigateByUrl("/home/bodycomponent/" + news);
   }
 
 
