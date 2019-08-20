@@ -11,6 +11,7 @@ import { LoaderComponent } from './loader/loader.component';
 import {ModelService} from './model.service';
 import { AddarticleComponent } from './addarticle/addarticle.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ContinuereadingComponent } from './continuereading/continuereading.component';
 
 
 
@@ -24,7 +25,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AsideComponent,
     NewscellComponent,
     LoaderComponent,
-    AddarticleComponent
+    AddarticleComponent,
+    ContinuereadingComponent
   ],
   imports: [
     BrowserModule,
