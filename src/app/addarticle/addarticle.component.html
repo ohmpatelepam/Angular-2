@@ -22,7 +22,7 @@
             </div><br>
         </div>
         <div id="button_div">
-                <input type="submit" value="Save" class="lowerbuttons">
+                <input type="submit" value="Save" class="lowerbuttons" [disabled]="!form.valid">
                 <input type="reset" (click) = "cancel()" value="Cancel" class="lowerbuttons">
         </div>
    </form>
