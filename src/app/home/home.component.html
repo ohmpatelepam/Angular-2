@@ -1,9 +1,9 @@
-<app-header>
+<app-header *ngIf = "loggedIn">
+</app-header>
 
-    </app-header>
     
     
-    <main >
+    <main *ngIf="loggedIn">
       
      <app-aside>
       </app-aside>
@@ -12,7 +12,7 @@
       
     </main>
     
-    <app-footer>
+    <app-footer *ngIf="loggedIn">
     
     </app-footer>
     

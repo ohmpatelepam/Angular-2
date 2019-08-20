@@ -50,6 +50,6 @@ export class AddarticleComponent implements OnInit {
    return true;
   }
   cancel(){
-    this.route.navigateByUrl('/home/bodycomponent/all');
+    this.route.navigateByUrl(window.localStorage.getItem("username")+'/home/bodycomponent/all');
   }
 }

@@ -19,12 +19,14 @@ export class ModelService {
 
   
   private data:Map<String,Array<obj>>;
+  private isLoggedIn:boolean;
 
   // @Output() onChange: EventEmitter<boolean> = new EventEmitter();
   constructor(){
     console.log("service");
     this.data = new Map();
     this.fetchData();
+    this.isLoggedIn = false;
   }
 
   fetchData = async ()=>{
@@ -86,7 +88,12 @@ export class ModelService {
   addNews(obj){
     this.data.set(obj.title,[obj]);
   }
-  
+  toggleLoggedIn(){
+    this.isLoggedIn = !this.isLoggedIn;
+  }
+  getLoginStatus(){
+    return this.isLoggedIn;
+  }
 
     
   initializeloader = ()=>{

@@ -8,9 +8,9 @@ import {HomeComponent} from './home/home.component';
 const routes: Routes = [
                         { path: '',  redirectTo: 'login', pathMatch: 'full' },
                         {path:'login', component: LoginComponent},
-                          {path:'home', component: HomeComponent,
-                        children:[ {path:'',redirectTo:'bodycomponent/all',pathMatch:'full'},
-                                 
+                        {path:':username', redirectTo: ':username/home', pathMatch:'full'},
+                          {path:':username/home', component: HomeComponent,
+                              children:[ {path:'',redirectTo:'bodycomponent/all',pathMatch:'full'},
                                   {path: 'addarticle' , component: AddarticleComponent}, 
                                     {path:'bodycomponent/:src', component: BodyComponent}
                                 ]}
