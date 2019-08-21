@@ -20,11 +20,15 @@ export class ModelService {
   
   private data:Map<String,Array<obj>>;
   private isLoggedIn:boolean;
+  private username:String;
+  private password:String;
 
   // @Output() onChange: EventEmitter<boolean> = new EventEmitter();
   constructor(){
     console.log("service");
     this.data = new Map();
+    this.username = "ohm";
+    this.password = "123";
     this.fetchData();
     this.isLoggedIn = false;
   }
@@ -95,6 +99,16 @@ export class ModelService {
     return this.isLoggedIn;
   }
 
+  getUsername(){
+    return this.username;
+  }
+  getPassword(){
+    return this.password;
+  }
+  changeUsernamePassword(a,b){
+    this.username = a;
+    this.password = b;
+  }
     
   initializeloader = ()=>{
 

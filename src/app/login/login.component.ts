@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
         });
   }
   loginClicked(){
-    if(this.form.get("username").value === "ohm" && this.form.get("password").value === "123"){
+    if(this.form.get("username").value === this.model.getUsername() && this.form.get("password").value === this.model.getPassword()){
       window.localStorage.setItem("username",this.form.get("username").value);
       window.localStorage.setItem("password",this.form.get("password").value);
       this.model.toggleLoggedIn();

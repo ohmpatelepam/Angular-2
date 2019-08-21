@@ -5,7 +5,7 @@
 }
 #submit-button{
     background-color: black;
-    width: 50px;
+    width: auto;
     height: 20px;
     color: white;
 }
