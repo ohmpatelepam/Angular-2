@@ -40,7 +40,7 @@ export class AddarticleComponent implements OnInit {
    saveClicked(){
     
     alert("News Successfully Added");
-    this.route.navigateByUrl('/home/bodycomponent/all');
+    this.route.navigateByUrl(window.localStorage.getItem("username") + '/home/bodycomponent/all');
   }
   validate(heading,description,content,author,date){
    if(heading == "" || description == "" || content == "" || author == "" || date == ""){
