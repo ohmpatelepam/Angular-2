@@ -39,7 +39,17 @@ export class AddarticleComponent implements OnInit {
   
    saveClicked(){
     
+    this.newData = {
+      sourceText : this.form.get("heading").value,
+      descriptionText :this.form.get("description").value,
+      contentText: this.form.get("content").value,
+      authorText:this.form.get("author").value,
+      dateText:this.form.get("date").value,
+      imageurlText:this.form.get("sourceURL").value
+    }
+    this.model.addNews(this.newData);
     alert("News Successfully Added");
+<<<<<<< HEAD
     this.route.navigateByUrl(window.localStorage.getItem("username") + '/home/bodycomponent/all');
   }
   validate(heading,description,content,author,date){
@@ -48,8 +58,12 @@ export class AddarticleComponent implements OnInit {
      return false;
    }
    return true;
+=======
+    this.model.signalAddNews(false);
+>>>>>>> f0bf3ac2331d1689e8591ba0b062ecf8a9031676
   }
+  
   cancel(){
-    this.route.navigateByUrl(window.localStorage.getItem("username")+'/home/bodycomponent/all');
+    this.model.signalAddNews(false);
   }
 }

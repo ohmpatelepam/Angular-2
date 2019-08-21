@@ -22,6 +22,9 @@ export class AsideComponent implements OnInit {
     console.log(news);
     this.route.navigateByUrl(window.localStorage.getItem("username") + "/home/bodycomponent/" + news);
   }
+  addNewsClicked(){
+    this.model.signalAddNews(true);
+  }
 
 
 }
