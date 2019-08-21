@@ -92,7 +92,7 @@ export class ModelService {
       return tempData; 
   }
   addNews(obj){
-    this.data.set(obj.title,[obj]);
+    this.data.set(obj.sourceText,[obj]);
     this.sendMessage(this.data);
   }
   toggleLoggedIn(){

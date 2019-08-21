@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class BodyComponent implements OnInit {
 
-  private data:Map<String,Array<obj>>;
+  @Input() private data:Map<String,Array<obj>>;
   displayPopUp:boolean;
   popUpData:Object;
   displayAddNews:boolean;
@@ -32,7 +32,11 @@ export class BodyComponent implements OnInit {
     this.model.onAddNew.subscribe((value) =>{
       this.displayAddNews = value;
     })
-    this.subscription = this.model.getMessage().subscribe(message => { this.data = message; });
+    console.log("subsctiption");
+    this.subscription = this.model.getMessage().subscribe(message => { 
+      console.log(message);
+      this.data = message; 
+    });
     
   }
   continueReadingPressed(value){
