@@ -39,8 +39,17 @@ export class AddarticleComponent implements OnInit {
   
    saveClicked(){
     
+    this.newData = {
+      sourceText : this.form.get("heading").value,
+      descriptionText :this.form.get("description").value,
+      contentText: this.form.get("content").value,
+      authorText:this.form.get("author").value,
+      dateText:this.form.get("date").value,
+      imageurlText:this.form.get("sourceURL").value
+    }
+    this.model.addNews(this.newData);
     alert("News Successfully Added");
-    this.route.navigateByUrl('/home/bodycomponent/all');
+    this.route.navigateByUrl(window.localStorage.getItem("username") + '/home/bodycomponent/all');
   }
   validate(heading,description,content,author,date){
    if(heading == "" || description == "" || content == "" || author == "" || date == ""){
