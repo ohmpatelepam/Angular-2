@@ -9,7 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class BodyComponent implements OnInit {
 
-  @Input() private data:Map<String,Array<obj>>;
+  private data:Map<String,Array<obj>>;
   displayPopUp:boolean;
   popUpData:Object;
   constructor(private model:ModelService,private route: ActivatedRoute) { 

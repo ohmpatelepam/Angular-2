@@ -108,6 +108,7 @@ export class ModelService {
   changeUsernamePassword(a,b){
     this.username = a;
     this.password = b;
+    return true;
   }
     
   initializeloader = ()=>{

@@ -32,5 +32,15 @@ export class LoginComponent implements OnInit {
       alert("wrong credentials");
     }
   }
+  changeCredentials(){
+    let username = this.form.get("username").value;
+    let password = this.form.get("password").value;
+    if(this.model.changeUsernamePassword(username,password)){
+      alert("successfully changed");
+    }else{
+      alert("cannot able to change");
+    }
+    
+  }
 
 }

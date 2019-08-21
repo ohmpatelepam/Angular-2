@@ -5,6 +5,7 @@
     <input type="text" formControlName = "username" ><br><br>
     Password:
     <input type="password" formControlName = "password"><br><br>
-    <input type="submit" id="submit-button" [disabled] = !form.valid>
+    <input type="submit" id="submit-button" [disabled] = !form.valid><br><br>
+    <input type="button" id="submit-button" [disabled] = !form.valid (click) = "changeCredentials()" value="Change">
 </div>
 </form>
