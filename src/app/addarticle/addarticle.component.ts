@@ -49,7 +49,7 @@ export class AddarticleComponent implements OnInit {
     }
     this.model.addNews(this.newData);
     alert("News Successfully Added");
-    this.route.navigateByUrl(window.localStorage.getItem("username") + '/home/bodycomponent/all');
+    this.model.signalAddNews(false);
   }
   
   cancel(){

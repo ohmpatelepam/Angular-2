@@ -1,5 +1,6 @@
 import { Injectable,Output, EventEmitter} from '@angular/core';
 import { mapToMapExpression } from '@angular/compiler/src/render3/util';
+import { Subject, Observable } from 'rxjs';
 
 
 export interface obj{
@@ -22,8 +23,9 @@ export class ModelService {
   private isLoggedIn:boolean;
   private username:String;
   private password:String;
-
   @Output() onAddNew: EventEmitter<boolean> = new EventEmitter();
+  public message = new Subject()
+  
   constructor(){
     console.log("service");
     this.data = new Map();
@@ -91,6 +93,7 @@ export class ModelService {
   }
   addNews(obj){
     this.data.set(obj.title,[obj]);
+    this.sendMessage(this.data);
   }
   toggleLoggedIn(){
     this.isLoggedIn = !this.isLoggedIn;
@@ -114,6 +117,13 @@ export class ModelService {
   signalAddNews(value){
     this.onAddNew.emit(value);
   }
+  sendMessage(message: Map<String,Array<obj>>) {
+    this.message.next(message);
+  }
+  getMessage(): Observable<any> {
+    return this.message.asObservable();
+  }
+
   initializeloader = ()=>{
 
   }

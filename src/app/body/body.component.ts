@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModelService, obj } from '../model.service';
 import {ActivatedRoute} from "@angular/router";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-body',
@@ -13,6 +14,7 @@ export class BodyComponent implements OnInit {
   displayPopUp:boolean;
   popUpData:Object;
   displayAddNews:boolean;
+  subscription: Subscription;
   constructor(private model:ModelService,private route: ActivatedRoute) { 
     this.data = undefined;   
     this.displayPopUp = false;
@@ -30,6 +32,8 @@ export class BodyComponent implements OnInit {
     this.model.onAddNew.subscribe((value) =>{
       this.displayAddNews = value;
     })
+    this.subscription = this.model.getMessage().subscribe(message => { this.data = message; });
+    
   }
   continueReadingPressed(value){
     console.log("this.continueReadingPressed");
