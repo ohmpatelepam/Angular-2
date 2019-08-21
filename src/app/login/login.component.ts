@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       window.localStorage.setItem("username",this.form.get("username").value);
       window.localStorage.setItem("password",this.form.get("password").value);
       this.model.toggleLoggedIn();
-      this.route.navigateByUrl(window.localStorage.getItem("username") + '/home');
+      this.route.navigateByUrl(window.localStorage.getItem("username") + '/home/bodycomponent/all');
     }else{
       alert("wrong credentials");
     }

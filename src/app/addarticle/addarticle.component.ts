@@ -51,14 +51,8 @@ export class AddarticleComponent implements OnInit {
     alert("News Successfully Added");
     this.route.navigateByUrl(window.localStorage.getItem("username") + '/home/bodycomponent/all');
   }
-  validate(heading,description,content,author,date){
-   if(heading == "" || description == "" || content == "" || author == "" || date == ""){
-     alert("All the fields are necessarcy except image");
-     return false;
-   }
-   return true;
-  }
+  
   cancel(){
-    this.route.navigateByUrl(window.localStorage.getItem("username")+'/home/bodycomponent/all');
+    this.model.signalAddNews(false);
   }
 }

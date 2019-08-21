@@ -12,9 +12,11 @@ export class BodyComponent implements OnInit {
   private data:Map<String,Array<obj>>;
   displayPopUp:boolean;
   popUpData:Object;
+  displayAddNews:boolean;
   constructor(private model:ModelService,private route: ActivatedRoute) { 
     this.data = undefined;   
     this.displayPopUp = false;
+    this.displayAddNews = false;
     this.popUpData = {};
   }
 
@@ -25,6 +27,9 @@ export class BodyComponent implements OnInit {
       scope.data = this.model.getFilterData(params);
       console.log(scope.data);
     });
+    this.model.onAddNew.subscribe((value) =>{
+      this.displayAddNews = value;
+    })
   }
   continueReadingPressed(value){
     console.log("this.continueReadingPressed");

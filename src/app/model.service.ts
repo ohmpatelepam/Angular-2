@@ -23,7 +23,7 @@ export class ModelService {
   private username:String;
   private password:String;
 
-  // @Output() onChange: EventEmitter<boolean> = new EventEmitter();
+  @Output() onAddNew: EventEmitter<boolean> = new EventEmitter();
   constructor(){
     console.log("service");
     this.data = new Map();
@@ -110,7 +110,10 @@ export class ModelService {
     this.password = b;
     return true;
   }
-    
+ 
+  signalAddNews(value){
+    this.onAddNew.emit(value);
+  }
   initializeloader = ()=>{
 
   }
