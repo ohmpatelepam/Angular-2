@@ -1,21 +1,17 @@
-<app-header *ngIf = "loggedIn">
-</app-header>
+<ng-template [ngIf] = "loggedIn">
+  
+  <app-header>
+  </app-header>
+  
+  <main>  
+    <app-aside>
+    </app-aside>
+    <app-body>
+    </app-body>
+  </main>
+  
+  <app-footer >
+  </app-footer>
 
-    
-    
-    <main *ngIf="loggedIn">
-      
-     <app-aside>
-      </app-aside>
-      <!-- <router-outlet></router-outlet> -->
-      <app-body>
-        
-      </app-body>
-      
-      
-    </main>
-    
-    <app-footer *ngIf="loggedIn">
-    
-    </app-footer>
+</ng-template>
     
