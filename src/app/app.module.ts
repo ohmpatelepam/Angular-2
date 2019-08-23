@@ -14,8 +14,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ContinuereadingComponent } from './continuereading/continuereading.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { CommonModule } from '@angular/common';
-
+import { CommonModule} from '@angular/common';
+import {DateFormat} from './datepipe'
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -31,10 +32,12 @@ import { CommonModule } from '@angular/common';
     AddarticleComponent,
     ContinuereadingComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    DateFormat
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

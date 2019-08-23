@@ -4,11 +4,11 @@ footer{
 	width: 100%;
 	color: white;
 	text-align: center;
-	height: 57px;
+	height: 45px;
 	bottom: 0px;
-	position: relative;
+	position: fixed;
 }
 #footer1 {
-	font-size: 15px;
-	padding-top: 21px;
+	font-size: 10px;
+	padding-top: 17px;
 }

@@ -1,6 +1,6 @@
 import { Injectable,Output, EventEmitter} from '@angular/core';
-import { mapToMapExpression } from '@angular/compiler/src/render3/util';
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 
 export interface obj{
@@ -26,7 +26,7 @@ export class ModelService {
   @Output() onAddNew: EventEmitter<boolean> = new EventEmitter();
   public message = new Subject()
   
-  constructor(){
+  constructor( private http: HttpClient){
     console.log("service");
     this.data = new Map();
     this.username = "ohm";
@@ -37,11 +37,11 @@ export class ModelService {
 
   fetchData = async ()=>{
     
-    await fetch('https://newsapi.org/v2/top-headlines?' +
+    await this.http.get('https://newsapi.org/v2/top-headlines?' +
     'country=us&' +
-    'apiKey=d4e03df5989c4e4a998e4fb2fe632d48').then(response => response.json()).then(jsonres => this.set(jsonres)).catch(() => {
-        alert("Please reload the page. Unable to fetch data");
-    });
+    'apiKey=d4e03df5989c4e4a998e4fb2fe632d48').subscribe((response) => {
+      this.set(response);
+    })
     
   } 
   set = (data) => {
@@ -123,12 +123,13 @@ export class ModelService {
   getMessage(): Observable<any> {
     return this.message.asObservable();
   }
+ 
 
-  initializeloader = ()=>{
+//   initializeloader = ()=>{
 
-  }
+//   }
   
-  removeLoader(){
+//   removeLoader(){
 
-  }
+//   }
 }

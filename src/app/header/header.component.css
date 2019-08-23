@@ -1,29 +1,27 @@
 
 #header {
-	width: 100%;
+	margin: 0px;
 	height: 80px;
 	background-color: #082759;
 	color: white;
-	margin-top: -20px;
 	display: flex;
+	
 }
 #subhead {
 	font-style: italic;
 	font-size: 11px;
-	padding-top:25px; 
-	
+}
+#left{
+	position: relative;
 }
 #head {
-	padding-left:40px; 
-	padding-top:20px; 
+	
+	
 	
 }
-#username{
-	margin-top: 45px;
-	margin-left: 760px;
+#user{
+	position: relative;
 }
 #logout{
-	height: 20px;
-	margin-top: 42px;
-	margin-left: 30px;
+	position: relative;
 }

@@ -1,5 +1,9 @@
 <header id="header"> 
-    <h2 id="head">NEWSFEED <span id="subhead"> Yet another Newsfeed </span></h2><span id="username">Welcome  {{username}}</span>
-    <input type="submit" value="Logout" id="logout" (click) = "logoutpressed()">
-   
+    <div id="left">
+        <h2 id="head">NEWSFEED <span id="subhead"> Yet another Newsfeed </span></h2>
+    </div>
+    <div id="user">
+        <p>Welcome  {{username}}</p>
+        <button id = "logout" (click) = "logoutpressed()">Logout</button>
+    </div>
 </header>

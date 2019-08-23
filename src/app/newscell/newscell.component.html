@@ -1,9 +1,9 @@
-<div>
-<img src = "{{image}}" alt="">
-<h1 class="title">{{source}}</h1>
-<p class="subscript"> <span class="posted">Posted on: </span>{{date}} <span class="posted">// Author: </span> {{author}} </p>
-<p class="lorem">
-   {{description}}<br>
-</p>
-<button class="button" (click) = "buttonPressed()">Continue Reading</button>
+<div id="cell">
+    <img src = "{{image}}" alt="">
+    <h1 class="title">{{source}}</h1>
+    <p class="subscript"> <span class="posted">Posted on: </span>{{date | formatDate: date}} <span class="posted">// Author: </span> {{author}} </p>
+    <p class="lorem">
+    {{description}}<br>
+    </p>
+    <button class="button" (click) = "buttonPressed()">Continue Reading</button><br><br>
 </div><br> <hr>

@@ -1,3 +1,7 @@
+#cell{
+	
+	border-radius: 2px;
+}
 .title {
 	color: #082759;
 }
@@ -27,4 +31,5 @@ img {
 	background-color: lightgray;
 	margin-right: 30px;
 	margin-top: 3px;
+	
 }
