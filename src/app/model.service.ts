@@ -24,7 +24,7 @@ export class ModelService {
   private username:String;
   private password:String;
   @Output() onAddNew: EventEmitter<boolean> = new EventEmitter();
-  public message = new Subject()
+  private message = new Subject()
   
   constructor( private http: HttpClient){
     console.log("service");
